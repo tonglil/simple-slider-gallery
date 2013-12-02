@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Simple Slider Gallery
-Plugin URI: http://tonyli.ca
+Plugin URI: https://github.com/tonglil/simple-slider-gallery
 Description: A WordPress plugin to create a gallery slide deck using the bxSlider (http://bxslider.com/)
 Version: 1.0
 Author: Tony Li
