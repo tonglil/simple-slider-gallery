@@ -46,7 +46,8 @@ function parse_gallery_shortcode($atts) {
 
     $images = get_posts($args);
 
-    echo '<ul class="simple-slider-gallery">';
+    $html = '';
+    $html .= '<ul class="simple-slider-gallery">';
     foreach ($images as $image) {
         $caption = $image->post_excerpt;
 
@@ -56,11 +57,13 @@ function parse_gallery_shortcode($atts) {
         $image_alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);
 
         // render your gallery here
-        echo '<li>';
-        echo wp_get_attachment_image($image->ID, $size);
-        echo '</li>';
+        $html .= '<li>';
+        $html .= wp_get_attachment_image($image->ID, $size);
+        $html .= '</li>';
     }
-    echo '</ul>';
+    $html .= '</ul>';
+
+    return $html;
 }
 remove_shortcode('gallery');
 add_shortcode('gallery', 'parse_gallery_shortcode');
