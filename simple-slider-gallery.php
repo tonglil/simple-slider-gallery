@@ -70,7 +70,7 @@ add_shortcode('gallery', 'parse_gallery_shortcode');
 
 function slider_requirements() {
     wp_register_style('slider-style', plugins_url('/slider.css', __FILE__));
-    wp_register_script('slider-script', plugins_url('/slider.js', __FILE__), array('jquery'));
+    wp_register_script('slider-script', plugins_url('/slider.min.js', __FILE__), array('jquery'));
     wp_register_script('ready-script', plugins_url('/ready-slider.js', __FILE__));
 
     wp_enqueue_style('slider-style');
